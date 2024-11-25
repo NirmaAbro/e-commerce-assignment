@@ -1,3 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +17,8 @@
   font-size: 62.5%;
   --primary-background: #f3f3f3;
 
-  --primary-background: #eee;
+  /* --primary-background: #eee; */
+  --primary-background: #faedcd;
   --nav-height: 60px;
 }
 body {
@@ -25,3 +35,4 @@ li {
   width: 90%;
   margin: 0 auto;
 }
+

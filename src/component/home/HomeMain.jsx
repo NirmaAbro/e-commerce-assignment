@@ -1,13 +1,17 @@
 import React from "react";
-import HomePhotoShoot from "./HomePhotoShoot";
-import HomeInfo from "./HomeInfo";
+// import HomeInfo from "./HomeInfo";
 import "./HomeMain.css";
+// import HomepartTwo from "./HomepartTwo";
+import HeroSection from "./HeroSection";
 
 function HomeMain() {
   return (
-    <main className="home-main container">
-      <HomeInfo />
-      <HomePhotoShoot />
+    <main className="">
+      {/* <HomeInfo /> */}
+      {/* <HomePhotoShoot /> */}
+      {/* <HomepartTwo /> */}
+      <HeroSection />
+
     </main>
   );
 }
