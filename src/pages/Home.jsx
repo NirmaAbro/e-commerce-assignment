@@ -2,6 +2,7 @@ import HomeMain from "../component/home/HomeMain";
 import React from "react";
 // import ImageSlider from "../component/ImageSlider";
 import SectionTwo from "./SectionTwo";
+import Footer from "../pages/Footer";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <HomeMain />
       {/* <ImageSlider /> */}
       <SectionTwo />
+      <Footer />
 
     </>
   );

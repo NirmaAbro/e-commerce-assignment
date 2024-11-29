@@ -1,46 +1,71 @@
-// import React, { useState } from 'react';
-// import image1 from '../images/bg6.jpg';
-// import image2 from '../images/bg6.jpg';
-// import image3 from '../images/bg4.jpg';
+// import React, { useState } from "react";
+// import bg3 from "../images/bg3.jpg";
+// // import img2 from "../images/bg5.jpg";
+// import img3 from "../images/bg6.jpg";  
+// import img4 from "../images/bg7.jpg";
 
 // const ImageSlider = () => {
-//   const images = [image1, image2, image3];
+//   console.log("image slider",bg3);
+//   const images = [
+//    bg3 ,img3,img4
+//   ];
+
 //   const [currentIndex, setCurrentIndex] = useState(0);
 
-//   const handlePrev = () => {
-//     setCurrentIndex((currentIndex === 0 ? images.length - 1 : currentIndex - 1));
+//   const prevSlide = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === 0 ? images.length - 1 : prevIndex - 1
+//     );
 //   };
 
-//   const handleNext = () => {
-//     setCurrentIndex((currentIndex === images.length - 1 ? 0 : currentIndex + 1));
+//   const nextSlide = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === images.length - 1 ? 0 : prevIndex + 1
+//     );
 //   };
 
 //   return (
-//     <div className="relative w-full max-w-lg mx-auto overflow-hidden">
-//       {/* Slider Image */}
-//       <div className="w-full">
+//     <div className="relative w-full max-w-lg mx-auto mt-10">
+
+//       {/* Slider Container */}
+//       <div className="overflow-hidden rounded-lg w-full ">
 //         <img
 //           src={images[currentIndex]}
-//           alt={`Slide ${currentIndex}`}
-//           className="w-full h-64 object-cover rounded-lg shadow-lg"
+//           alt={`Slide ${currentIndex + 1}`}
+//           className=" transition-transform duration-500 w-full h-auto rounded-xl"
 //         />
 //       </div>
 
 //       {/* Previous Button */}
 //       <button
-//         onClick={handlePrev}
-//         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-700 focus:outline-none"
+//         onClick={prevSlide}
+//         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-600"
 //       >
-//         &#8592;
+//         ❮
 //       </button>
 
 //       {/* Next Button */}
 //       <button
-//         onClick={handleNext}
-//         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-700 focus:outline-none"
+//         onClick={nextSlide}
+//         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-600"
 //       >
-//         &#8594;
+//         ❯
 //       </button>
+
+//       {/* Dots Navigation */}
+//       <div className="flex justify-center mt-4 space-x-2">
+//         {images.map((_, index) => (
+//           <button
+//             key={index}
+//             onClick={() => setCurrentIndex(index)}
+//             className={`w-3 h-3 rounded-full ${
+//               index === currentIndex
+//                 ? "bg-gray-800"
+//                 : "bg-gray-400 hover:bg-gray-600"
+//             }`}
+//           ></button>
+//         ))}
+//       </div>
 //     </div>
 //   );
 // };
@@ -48,34 +73,87 @@
 // export default ImageSlider;
 
 
-import React from 'react'
 
-function ImageSlider() {
+import React, { useState } from "react";
+import bg3 from "../images/bg3.jpg";
+import img2 from "../images/bg5.jpg";
+import img3 from "../images/bg6.jpg";
+import img4 from "../images/bg7.jpg";
+
+const ImageSlider = () => {
+  console.log("image slider", bg3);
+  const images = [bg3, img3, img4];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <div className=' border-4 border-black '>
-      <div className="max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
-      {/* Vision Section */}
-      
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-blue-600">Our Vision</h2>
-        <p className="mt-2 text-gray-700">
-          To be a global leader in providing innovative solutions that transform industries and improve lives.
+    <div className="relative w-full max-w-4xl mx-auto mt-10 px-4">
+      {/* Header Section */}
+      <div className="text-center mb-8  pt-32 ">
+        <h1 className=" md:text-3xl pt-10 mt-5 whitespace-nowrap lg:text-6xl font-bold text-gray-800">Welcome to ShopLux</h1>
+        <p className="text-gray-600 mt-2 text-3xl ">
+          Discover a wide range of premium products curated just for you. Shop
+          the best deals, enjoy seamless browsing, and experience the ultimate
+          in online shopping.
         </p>
       </div>
 
-      {/* Mission Section */}
-      <div>
-        <h2 className="text-2xl font-bold text-blue-600">Our Mission</h2>
-        <p className="mt-2 text-gray-700">
-          To deliver exceptional value to our customers through cutting-edge technology, commitment to quality, and dedication to service.
-        </p>
+      {/* Slider Container */}
+      <div className="relative">
+        <div className="overflow-hidden rounded-lg shadow-lg">
+          <img
+            src={images[currentIndex]}
+            alt={`Slide ${currentIndex + 1}`}
+            className="transition-transform duration-500 w-full h-auto rounded-xl"
+          />
+        </div>
+
+        {/* Previous Button */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-600"
+        >
+          ❮
+        </button>
+
+        {/* Next Button */}
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-600"
+        >
+          ❯
+        </button>
+
+        {/* Dots Navigation */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex
+                  ? "bg-gray-800"
+                  : "bg-gray-400 hover:bg-gray-600"
+              }`}
+            ></button>
+          ))}
+        </div>
       </div>
     </div>
+  );
+};
 
-
-    </div>
-  )
-}
-
-export default ImageSlider
+export default ImageSlider;
 

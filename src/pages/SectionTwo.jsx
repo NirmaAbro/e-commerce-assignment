@@ -20,7 +20,7 @@ function SectionTwo() {
         <div className="w-full mt-28">
           <h1 className="md:text-5xl text-2xl font-sans text-left font-bold mb-4">
             Shop Smart,
-            <span className="text-blue-500 justify-start items-start">
+            <span className="text-yellow-600 justify-start items-start">
               Live Better
             </span>
           </h1>
@@ -38,7 +38,7 @@ function SectionTwo() {
           place. Experience hassle-free shopping tailored to your lifestyle.
         </p>
         <div className="flex w-full m-4 ">
-          <TiTick className="bg-blue-500 text-white m-2 text-xl rounded-full" />
+          <TiTick className="bg-yellow-500 text-white m-2 text-xl rounded-full" />
           <p className="p-1 text-2xl ">
             <span className="font-bold p-1">50,000+</span> Products Available{" "}
           </p>

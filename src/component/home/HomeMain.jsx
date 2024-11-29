@@ -3,6 +3,7 @@ import React from "react";
 import "./HomeMain.css";
 // import HomepartTwo from "./HomepartTwo";
 import HeroSection from "./HeroSection";
+import ImageSlider from "../ImageSlider";
 
 function HomeMain() {
   return (
@@ -11,6 +12,7 @@ function HomeMain() {
       {/* <HomePhotoShoot /> */}
       {/* <HomepartTwo /> */}
       <HeroSection />
+      <ImageSlider />
 
     </main>
   );
