@@ -17,6 +17,8 @@ import SentiHome from "./component/sentiment/SentiHome";
 import SectionTwo from "./pages/SectionTwo";
 import Signup from "./component/auth/Signup";
 import Login from "./component/auth/Login";
+import Success from "./pages/Success";
+import Cancel from "./pages/Cancel";
 
 // react toast
 import { Toaster } from "react-hot-toast";
@@ -33,6 +35,8 @@ const router = createBrowserRouter(
       <Route path="/section" element={<SectionTwo />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/signup" element={<Signup />}></Route>
+      <Route path="/success" element={<Success />} />
+      <Route path="/cancel"   element={<Cancel />}/>
     </Route>
   )
 );
