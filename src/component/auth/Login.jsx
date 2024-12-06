@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "../auth/utills";
 
 function Login() {
@@ -102,9 +102,9 @@ function Login() {
           </span>
         </form>
 
-        <div className="w-20 h-20 justify-center items-center text-center flex mt-20  border4 border-black">
+        {/* <div className="w-20 h-20 justify-center items-center text-center flex mt-20  border4 border-black">
           <ToastContainer />
-        </div>
+        </div> */}
 
         {/* <ToastContainer /> */}
       </div>

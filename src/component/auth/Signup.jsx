@@ -122,7 +122,7 @@
 
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "../auth/utills";
 
 function Signup() {
@@ -238,9 +238,9 @@ function Signup() {
 
         {/* <ToastContainer  />  */}
 
-        <div className="w-20 h-20 justify-center items-center text-center flex mt-20  border4 border-black">
+        {/* <div className="w-20 h-20 justify-center items-center text-center flex mt-20  border4 border-black">
           <ToastContainer />
-        </div>
+        </div> */}
       </div>
     </div>
   );

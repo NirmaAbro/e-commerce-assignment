@@ -230,10 +230,11 @@ function Navigations({ toggleShowCart, user, handleLogout }) {
         ) : (
           // Show username and logout button if logged in
           <li className="nav-link">
+            {console.log(user)}
             <span className="text-yellow-600  ">Hey ! {user}</span>
             <button
               onClick={handleLogout}
-              className="ml-4 bg-red-500 text-black py-1 px-4 rounded"
+              className="ml-4 bg-yellow-800 text-black py-1 px-4 rounded"
             >
               Logout
             </button>

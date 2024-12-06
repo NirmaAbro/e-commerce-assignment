@@ -20,7 +20,7 @@ function SectionTwo() {
         <div className="w-full mt-28">
           <h1 className="md:text-5xl text-2xl font-sans text-left font-bold mb-4">
             Shop Smart,
-            <span className="text-yellow-600 justify-start items-start">
+            <span className="text-yellow-800 justify-start items-start">
               Live Better
             </span>
           </h1>

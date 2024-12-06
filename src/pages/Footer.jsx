@@ -22,8 +22,8 @@ const Footer = () => {
   const twitterUrl = "https://www.twitter.com/yourprofile";
 
   return (
-    <footer className="bg-yellow-500 text-black py-5 pb-0 pt-5 mt-20">
-      <div className="container mx-auto px-4">
+    <footer className="bg-beige-500  text-black py-5 pb-0 pt-5 mt-20">
+      <div className="container mx-auto px-4 pt-16 ">
         <div className="flex flex-wrap justify-between">
           <div className="w-full sm:w-1/2 lg:w-1/4 mb-6">
             <LuShirt className="text-6xl lg:text-8xl  rounded-full p-1" />

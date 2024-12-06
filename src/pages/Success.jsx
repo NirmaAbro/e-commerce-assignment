@@ -26,14 +26,14 @@ const Success = () => {
   }, [location]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-green-100 text-center py-8">
+    <div className="min-h-screen flex items-center justify-center bg-beige-100 text-center py-8">
       <div className="max-w-md mx-auto bg-white p-8 rounded shadow-lg">
-        <h1 className="text-2xl font-semibold text-green-600">Payment Successful!</h1>
-        <p className="mt-4 text-xl text-green-800">{message}</p>
+        <h1 className="text-2xl font-semibold text-yellow-800">Payment Successful!</h1>
+        <p className="mt-4 text-xl text-yellow-800">{message}</p>
         <div className="mt-8">
           <a
             href="/"
-            className="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300"
+            className="px-6 py-2 bg-beige-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300"
           >
             Go to Home Page
           </a>
